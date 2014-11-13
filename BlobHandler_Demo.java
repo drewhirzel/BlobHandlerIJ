@@ -179,7 +179,7 @@ public class BlobHandler_Demo implements PlugIn {
    // for details on loading images from the jar
    private ImagePlus loadExample() {
       ImagePlus imp = null;
-      InputStream is = getClass().getResourceAsStream(path+"test.tif");
+      InputStream is = getClass().getResourceAsStream(path+"extras/test.tif");
       if (is!=null) {
           Opener opener = new Opener();
           imp = opener.openTiff(is, "BlobHandler Test Image");
