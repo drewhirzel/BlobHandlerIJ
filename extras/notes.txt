@@ -1,0 +1,25 @@
+notes for BlobHandler
+
+speed:
+
+BlobHandler is slower than ParticleAnalyzer - try analyzing the sample image
+"Particles" using Analyzer and BlobHandler.  It gest slower still if "Combine
+if Closer" Than is anything but zero.  I don't find that it is annoyingly slow.  
+
+crack boundary vs. perimeter pixels:
+Inner and and outer boundaries are computed and stored two ways.  (1) the the upper-left coordinates
+of boundary pixels define the pixel boundary and (2) the interpixel path between pixels define the 
+"crack" boundary.  The former is derived from the original scan using the CCL algorithm. It is used for 
+estimating the volume of objects when the SVW (Sieracki,Viles and Webb (1989)) biovolume method is used.
+The latter is computed using a slight adaptation of ImageJ's Wand.  The crack boundary is used for 
+all other computations of shape, etc.
+  
+
+to do:
+
+- [done, 2010-4-07] add optional crack boundary?
+- add more affine moment invariants from new book?
+- greyscale moment invariants?
+- separate hu and ami invariants?
+- add rois to ROI manager?
+- [done, 2010-02-27] option to size filter before/after combine?

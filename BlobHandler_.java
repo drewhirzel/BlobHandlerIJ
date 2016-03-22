@@ -188,14 +188,14 @@ public class BlobHandler_ implements PlugInFilter {
       
       int[][] table = bh.blobs.computeMergeTable(combineIfCloserThan);
       
-      IJ.showStatus("Combining nearest neighbors");
+      //IJ.showStatus("Combining nearest neighbors");
       for (int i = 0; i < table.length; i++){
-       IJ.showProgress(i, table.length-1);
+       //IJ.showProgress(i, table.length-1);
        if (table[i].length > 1) {
           bh.blobs.combine(table[i]);
        } //table shows two or more to combine
       } //i-loop 
-      IJ.showProgress(2.0);
+      //IJ.showProgress(2.0);
     }//combine?
     
     if (filterAfterCombine == true){

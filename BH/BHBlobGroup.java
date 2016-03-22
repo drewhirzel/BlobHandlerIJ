@@ -333,14 +333,14 @@ public class BHBlobGroup {
       if (count() == 0) { return;}
       BHCompoundBlob b;
       int[] labels = getLabels();
-      IJ.showStatus("Translating blobs");
+      //IJ.showStatus("Translating blobs");
       for (int i = 0; i < labels.length; i++){
-        IJ.showProgress(i, labels.length-1);
+        //IJ.showProgress(i, labels.length-1);
         b = get(labels[i]);
         b.translate(dx,dy);
       }
-      IJ.showStatus(" ");
-      IJ.showProgress(2.0);
+      //IJ.showStatus(" ");
+      //IJ.showProgress(2.0);
     //
     //if (vData.size() != 0) {
     //  BHCompoundBlob[] b = toArray();
@@ -370,14 +370,14 @@ public class BHBlobGroup {
     if (count() == 0) { return;}
     BHCompoundBlob b;
     int[] labels = getLabels();
-    IJ.showStatus("Computing side touches");
+    //IJ.showStatus("Computing side touches");
     for (int i = 0; i < labels.length; i++){
-      IJ.showProgress(i, labels.length-1);
+      //IJ.showProgress(i, labels.length-1);
       b = get(labels[i]);
       b.side = b.isTouching(xs, ys, w, h);
     }
-    IJ.showStatus(" ");
-    IJ.showProgress(2.0);
+    //IJ.showStatus(" ");
+    //IJ.showProgress(2.0);
     
   }//setSideFlag  
   
@@ -398,17 +398,17 @@ public class BHBlobGroup {
     double[][] dist = new double[nblobs][nblobs];
     int[] labels = getLabels(); //this will be nblobs long
     BHCompoundBlob leftHandBlob;
-    IJ.showStatus("Computing nearest neighbor distances for "+nblobs+" blobs");
+    //IJ.showStatus("Computing nearest neighbor distances for "+nblobs+" blobs");
     for (int y = 0; y < nblobs; y++){
-      IJ.showProgress(y, nblobs-1);
+      //IJ.showProgress(y, nblobs-1);
       leftHandBlob = get(labels[y]);
       for (int x = (y+1); x < nblobs; x++){
         dist[y][x] = leftHandBlob.computeMinimumDistanceTo(get(labels[x]));
         dist[x][y] = dist[y][x];//mirror image
       } //x-loop
     }// y-loop
-    IJ.showStatus(" ");
-    IJ.showProgress(2.0);
+    //IJ.showStatus(" ");
+    //IJ.showProgress(2.0);
     return dist;
   }//computeMinimumDistanceTable
 

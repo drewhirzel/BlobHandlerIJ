@@ -28,7 +28,7 @@ public class BlobHandler {
   
   /** If true output meaningful info */
   public boolean verbose = true;
-  /** If true, includes measurment info about the background */
+  /** If true, includes measurement info about the background */
   public boolean includeBackground = false;
   /** Set to the combination of mearements to make using BHBlob.BASIC + BHBlob.LOCATION + whatever...
     */
@@ -273,9 +273,9 @@ public class BlobHandler {
       blobs.add(singleBlob);
     }
 
-    IJ.showStatus("Scanning for blobs");
+    //IJ.showStatus("Scanning for blobs");
     for (int y = 1; y < (ph-1); y++){
-      IJ.showProgress(y, ph-1);
+      //IJ.showProgress(y, ph-1);
       label = 0; //at each row reset the label
      
       for (int x = 1; x < (pw-1); x++){
@@ -320,8 +320,8 @@ public class BlobHandler {
       }// x-loop
       
     } // y-loop
-    IJ.showStatus(" ");
-    IJ.showProgress(2.0);
+    //IJ.showStatus(" ");
+    //IJ.showProgress(2.0);
     
     blobs.translate(-1,-1);
     
