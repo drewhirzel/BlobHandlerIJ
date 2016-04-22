@@ -1,4 +1,4 @@
-# README #
+## BlobHandler
 
 BlobHandler is a set of particle analysis tools for working with foreground objects (blobs) in 2d images.   
 
@@ -36,6 +36,18 @@ While it is not necessary to use the BlobHandler_ class to run BlobHandler progr
    + Selection of the features to include in output if Results is checked
 
 ![BlobHandler GUI]()
+
+
+### Installation
+
+Clone the repository to an ImageJ plugins directory. 
+
+### Usage
+
+The repository includes compiled code (.jar and .class) to ease the user experience.  You should be able to simply restart ImageJ (or use "Help > Refresh Menus").  The navigate to "Plugins > BlobHandler > BlobHandler".
+
+
+
 
 ### References ###
 
