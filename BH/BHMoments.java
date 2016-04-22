@@ -15,7 +15,7 @@ public class BHMoments {
 
    public BHMoments(){}
    public BHMoments(BHPoint[] p){
-      compute(p)
+      compute(p);
    }
 
    public void zero(){
