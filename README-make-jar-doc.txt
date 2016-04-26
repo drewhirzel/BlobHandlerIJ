@@ -10,7 +10,7 @@ rm *.class
 (3) Navigate to the BH directory and Build a jar for BlobHandler and then remove the classes
 
 cd <ImageJ-path>/plugins/BlobHandler/BH
-jar cvfM ../BlobHandler.jar *.class
+jar cvfM ../BlobHandler.jar *.class graph/*.class
 rm *.class
 
 (4) Compile BlobHandler_.java and BlobHandler_Demo.java separately.
