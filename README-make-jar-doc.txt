@@ -11,7 +11,7 @@ rm *.class
 
 cd <ImageJ-path>/plugins/BlobHandler/BH
 jar cvfM ../BlobHandler.jar *.class graph/*.class
-rm *.class
+rm *.class graph/*.class
 
 (4) Compile BlobHandler_.java and BlobHandler_Demo.java separately.
 
